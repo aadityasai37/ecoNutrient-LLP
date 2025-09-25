@@ -1,8 +1,10 @@
+"use client";
 import React from "react";
+import { useCartStore } from "../store/cart";
 
 const CartBadge = () => {
-  // This would typically connect to your cart store
-  const cartItemCount = 0; // Placeholder - will be connected to cart store
+  const cartItems = useCartStore((s) => s.items);
+  const cartItemCount = cartItems.reduce((total, item) => total + item.qty, 0);
 
   return (
     <button

@@ -18,6 +18,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "ecoNutrient",
   description: "Connecting Cultures Through Native Indian Flavours",
+  icons: {
+    icon: "/Header_Logo_2.png",
+  },
   openGraph: {
     title: "ecoNutrient",
     description: "Connecting Cultures Through Native Indian Flavours",
