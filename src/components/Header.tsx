@@ -17,54 +17,92 @@ export default function Header() {
 
   return (
     <header
-      className={`sticky top-0 z-40 shadow-sm transition-all duration-300 ${
-        isScrolled ? "bg-white bg-opacity-70 backdrop-blur-md" : "bg-white"
-      }`}
+      className={`sticky top-9 z-40 py-2 transition-all duration-300 ${
+        isScrolled ? "px-2 bg-transparent" : "px-4 shadow-md bg-white/95 backdrop-blur-md"
+      } clip-path-polygon(0 0, 100% 0, 100% 85%, 0 100%)`}
+      style={{ clipPath: "polygon(0 0, 100% 0, 100% 85%, 0 100%)" }}
     >
-      <div className="container flex items-center justify-between py-3">
+      <div className="container flex items-center justify-between">
         <Link
           href="/"
-          className="flex items-center focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand ml-8"
+          className="flex items-center focus-visible:ring-2 ring-brand ring-offset-2 ml-4"
         >
-          <Image
-            src="/Header_Logo_2.png"
-            alt="ecoNutrient"
-            width={48}
-            height={48}
-            className="h-12 w-auto"
-          />
+          <Link
+  href="/"
+  className="flex items-center focus-visible:ring-2 ring-brand ring-offset-2 ml-4"
+  aria-label="ecoNutrient Home"
+/>
+  <Image
+    src="/Header_Logo_2.png"
+    alt="ecoNutrient Logo"
+    width={128}
+    height={48}
+    priority
+    className="h-12 w-auto object-contain"
+  />
+
         </Link>
         <nav
-          className="hidden md:flex items-center gap-6 ml-auto"
+          className="hidden md:flex items-center gap-2 ml-auto"
           aria-label="Primary Navigation"
         >
           <Link
             href="/"
-            className="font-bold text-black hover:text-brand hover:scale-105 active:scale-95 transition-all duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
+            className={`font-fraunces font-semibold text-base px-4 py-2 rounded-full hover:-translate-y-0.5 hover:backdrop-blur-md active:scale-98 active:shadow-inner transition-all duration-140 ease-out focus-visible:ring-2 ring-brand ring-offset-2 min-w-[20px] ${
+              isScrolled 
+                ? "text-white hover:text-white/80" 
+                : "text-black bg-white/80 hover:bg-white/90 hover:text-brand"
+            }`}
           >
             Home
           </Link>
           <Link
             href="/about"
-            className="font-bold text-black hover:text-brand hover:scale-105 active:scale-95 transition-all duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
+            className={`font-inter font-semibold text-sm px-4 py-2 rounded-full hover:-translate-y-0.5 hover:backdrop-blur-md active:scale-98 active:shadow-inner transition-all duration-140 ease-out focus-visible:ring-2 ring-brand ring-offset-2 min-w-[20px] ${
+              isScrolled 
+                ? "text-white hover:text-white/80" 
+                : "text-black bg-white/80 hover:bg-white/90 hover:text-brand"
+            }`}
           >
             About Us
           </Link>
           <Link
             href="/backstage"
-            className="font-bold text-black hover:text-brand hover:scale-105 active:scale-95 transition-all duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
+            className={`font-inter font-semibold text-sm px-4 py-2 rounded-full hover:-translate-y-0.5 hover:backdrop-blur-md active:scale-98 active:shadow-inner transition-all duration-140 ease-out focus-visible:ring-2 ring-brand ring-offset-2 min-w-[20px] ${
+              isScrolled 
+                ? "text-white hover:text-white/80" 
+                : "text-black bg-white/80 hover:bg-white/90 hover:text-brand"
+            }`}
           >
             Backstage
           </Link>
           <Link
+            href="/products"
+            className={`font-inter font-semibold text-sm px-4 py-2 rounded-full hover:-translate-y-0.5 hover:backdrop-blur-md active:scale-98 active:shadow-inner transition-all duration-140 ease-out focus-visible:ring-2 ring-brand ring-offset-2 min-w-[20px] ${
+              isScrolled 
+                ? "text-white hover:text-white/80" 
+                : "text-black bg-white/80 hover:bg-white/90 hover:text-brand"
+            }`}
+          >
+            Products
+          </Link>
+          <Link
             href="/contact"
-            className="font-bold text-black hover:text-brand hover:scale-105 active:scale-95 transition-all duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
+            className={`font-inter font-semibold text-sm px-4 py-2 rounded-full hover:-translate-y-0.5 hover:backdrop-blur-md active:scale-98 active:shadow-inner transition-all duration-140 ease-out focus-visible:ring-2 ring-brand ring-offset-2 min-w-[20px] ${
+              isScrolled 
+                ? "text-white hover:text-white/80" 
+                : "text-black bg-white/80 hover:bg-white/90 hover:text-brand"
+            }`}
           >
             Contact Us
           </Link>
           <Link
             href="/track"
-            className="font-bold text-black hover:text-brand hover:scale-105 active:scale-95 transition-all duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
+            className={`font-inter font-semibold text-sm px-4 py-2 rounded-full hover:-translate-y-0.5 hover:backdrop-blur-md active:scale-98 active:shadow-inner transition-all duration-140 ease-out focus-visible:ring-2 ring-brand ring-offset-2 min-w-[20px] ${
+              isScrolled 
+                ? "text-white hover:text-white/80" 
+                : "text-black bg-white/80 hover:bg-white/90 hover:text-brand"
+            }`}
           >
             Track Package
           </Link>
@@ -72,7 +110,9 @@ export default function Header() {
         <Link
           href="/cart"
           aria-label="Shopping cart"
-          className="flex items-center font-bold text-black hover:text-brand hover:scale-105 active:scale-95 transition-all duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand ml-4"
+          className={`flex items-center font-inter font-semibold text-sm hover:scale-105 active:scale-95 transition-all duration-200 focus-visible:ring-2 ring-brand ring-offset-2 ml-4 ${
+            isScrolled ? "text-white" : "text-black"
+          } hover:text-brand`}
         >
           <CartBadge />
         </Link>

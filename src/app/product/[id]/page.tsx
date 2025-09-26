@@ -28,7 +28,7 @@ export default function ProductPage() {
 
   const productDetails = {
     name: "Sattu",
-    description: "Premium quality Sattu made from roasted gram flour, rich in protein and essential nutrients. Perfect for traditional Indian beverages and healthy recipes.",
+    description: "The superfood of India - Fuel your day with protein-rich, wholesome Sattu from ecoNutrient.",
     features: [
       "High in protein and fiber",
       "Rich in essential minerals",
@@ -45,7 +45,7 @@ export default function ProductPage() {
   };
 
   return (
-    <div className="container py-8">
+    <div className="container py-8 bg-green-50">
       <div className="mb-6">
         <Link
           href="/"
@@ -58,12 +58,12 @@ export default function ProductPage() {
       <div className="grid lg:grid-cols-2 gap-12">
         {/* Product Images */}
         <div className="space-y-4">
-          <div className="aspect-square bg-neutral-100 rounded-lg overflow-hidden">
+          <div className="aspect-square bg-neutral-100 rounded-lg overflow-hidden pl-4">
             <Image
               src={productImages[selectedImage]}
               alt={productDetails.name}
-              width={600}
-              height={600}
+              width={300}
+              height={300}
               className="w-full h-full object-cover"
             />
           </div>
@@ -72,7 +72,7 @@ export default function ProductPage() {
               <button
                 key={index}
                 onClick={() => setSelectedImage(index)}
-                className={`aspect-square bg-neutral-100 rounded-lg overflow-hidden border-2 ${
+                className={`aspect-square bg-neutral-100 rounded-lg overflow-hidden border-2 hover:scale-105 active:scale-95 active:shadow-md active:shadow-brand/50 transition-all duration-200 ${
                   selectedImage === index ? "border-brand" : "border-transparent"
                 }`}
               >
@@ -103,7 +103,7 @@ export default function ProductPage() {
                 <button
                   key={v.key}
                   onClick={() => setVariant(v.key)}
-                  className={`px-4 py-2 rounded border ${
+                  className={`px-4 py-2 rounded border hover:scale-110 active:scale-105 active:shadow-md active:shadow-brand/50 active:ring-2 active:ring-brand/50 transition-all duration-200 ${
                     variant === v.key
                       ? "border-brand text-brand bg-brand/10"
                       : "border-neutral-300 hover:border-brand"
