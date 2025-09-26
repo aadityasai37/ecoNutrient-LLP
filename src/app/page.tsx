@@ -6,22 +6,19 @@ const testimonials = [
     name: "Priya Sharma",
     city: "Mumbai",
     rating: 5,
-    quote: "Absolutely love the authentic taste of ecoNutrient's Sattu! It's fresh, nutritious, and brings back childhood memories.",
-    avatar: "/avatars/priya.jpg" // Placeholder
+    quote: "Absolutely love the authentic taste of ecoNutrient's Sattu! It's fresh, nutritious, and brings back childhood memories."
   },
   {
     name: "Rajesh Kumar",
     city: "Delhi",
     rating: 5,
-    quote: "Great quality and fast delivery. The Sattu is perfect for my morning routine – highly recommend!",
-    avatar: "/avatars/rajesh.jpg" // Placeholder
+    quote: "Great quality and fast delivery. The Sattu is perfect for my morning routine – highly recommend!"
   },
   {
     name: "Anita Patel",
     city: "Bangalore",
     rating: 5,
-    quote: "Premium product at reasonable prices. The packaging is eco-friendly too. Will order again!",
-    avatar: "/avatars/anita.jpg" // Placeholder
+    quote: "Premium product at reasonable prices. The packaging is eco-friendly too. Will order again!"
   }
 ];
 
@@ -96,11 +93,9 @@ export default function HomePage() {
                 tabIndex={0}
               >
                 <div className="flex items-center mb-4">
-                  <img
-                    src={testimonial.avatar}
-                    alt={`${testimonial.name}, ${testimonial.city}`}
-                    className="w-12 h-12 rounded-full mr-4 object-cover"
-                  />
+                  <div className="w-12 h-12 rounded-full mr-4 bg-brand flex items-center justify-center">
+                    <span className="text-white font-semibold text-sm">{testimonial.name.charAt(0)}</span>
+                  </div>
                   <div>
                     <h4 className="font-semibold text-black">{testimonial.name}</h4>
                     <p className="text-sm text-neutral-600">{testimonial.city}</p>

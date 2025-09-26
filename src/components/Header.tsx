@@ -26,21 +26,16 @@ export default function Header() {
         <Link
           href="/"
           className="flex items-center focus-visible:ring-2 ring-brand ring-offset-2 ml-4"
+          aria-label="ecoNutrient Home"
         >
-          <Link
-  href="/"
-  className="flex items-center focus-visible:ring-2 ring-brand ring-offset-2 ml-4"
-  aria-label="ecoNutrient Home"
-/>
-  <Image
-    src="/Header_Logo_2.png"
-    alt="ecoNutrient Logo"
-    width={128}
-    height={48}
-    priority
-    className="h-12 w-auto object-contain"
-  />
-
+          <Image
+            src="/Header_Logo_2.png"
+            alt="ecoNutrient Logo"
+            width={128}
+            height={48}
+            priority
+            className="h-12 w-auto object-contain"
+          />
         </Link>
         <nav
           className="hidden md:flex items-center gap-2 ml-auto"
