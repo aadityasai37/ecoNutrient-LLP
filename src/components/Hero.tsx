@@ -42,8 +42,8 @@ const Hero = () => {
       aria-label="Hero section"
     >
       <div className={`relative z-10 max-w-5xl w-full flex flex-col items-center justify-center transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-        <div className="bg-white/95 backdrop-blur-md rounded-[12px] p-4 sm:p-6 max-w-[38ch] mb-8 shadow-sm">
-          <h1 className="font-fraunces font-bold tracking-tight text-black text-center">
+        <div className="bg-black/95 backdrop-blur-md rounded-[12px] p-4 sm:p-6 max-w-[38ch] mb-8 shadow-sm">
+          <h1 className="font-fraunces font-bold tracking-tight text-white text-center">
             <span className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl block whitespace-nowrap">Connecting Cultures Through</span>
             <span className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl block whitespace-nowrap">Native Indian Flavours</span>
           </h1>
@@ -51,14 +51,14 @@ const Hero = () => {
 
         <div className="h-20 flex items-center justify-center mb-8">
           <div
-            className="bg-white/95 backdrop-blur-sm rounded-[10px] p-3 shadow-sm clip-path-blob"
+            className="bg-black/95 backdrop-blur-sm rounded-[10px] p-3 shadow-sm clip-path-blob"
             style={{ clipPath: "ellipse(60% 40% at 50% 50%)" }}
             onMouseEnter={() => setIsPaused(true)}
             onMouseLeave={() => setIsPaused(false)}
             onFocus={() => setIsPaused(true)}
             onBlur={() => setIsPaused(false)}
           >
-            <p className={`text-2xl sm:text-3xl md:text-4xl font-semibold text-black transition-all duration-700 ease-out ${
+            <p className={`text-2xl sm:text-3xl md:text-4xl font-semibold text-white transition-all duration-700 ease-out ${
               isPaused ? 'animate-none' : 'animate-slide-fade'
             }`}>
               {rotatingTexts[currentTextIndex]}
