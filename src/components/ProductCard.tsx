@@ -68,16 +68,19 @@ export default function ProductCard({ displayOnly = false, id = "sattu" }: Produ
   return (
     <div className="grid md:grid-cols-2 gap-8 items-start">
       <Link href={`/product/${id}`} className="block">
-        <div className="aspect-square bg-neutral-100 rounded-lg overflow-hidden cursor-pointer hover:shadow-lg transition-shadow duration-300">
-          <Image
-            src="/Sattu Images/Sattu 1.png"
-            alt="Sattu - Premium Quality"
-            width={300}
-            height={300}
-            className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-          />
-        </div>
-      </Link>
+  <div className="aspect-[4/3] bg-neutral-100 rounded-lg overflow-hidden cursor-pointer hover:shadow-lg transition-shadow duration-300">
+    <Image
+      src="/Sattu Images/Sattu 1.png"
+      alt="Sattu - Premium Quality"
+      width={600}
+      height={450}
+      className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+    />
+  </div>
+</Link>
+
+
+            
       {/* Image guidance: Upload 1200x1200 main image; use 600x600 for thumbs; hero background 1920x1080. */}
       <div>
         <h3 className="text-2xl font-semibold">Sattu</h3>

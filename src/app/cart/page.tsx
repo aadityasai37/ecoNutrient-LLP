@@ -33,12 +33,12 @@ export default function CartPage() {
                     min={1}
                     value={it.qty}
                     onChange={(e) =>
-                      updateQty(it.id, it.variant as any, Number(e.target.value))
+                      updateQty(it.id, it.variant, Number(e.target.value))
                     }
                     className="w-16 border rounded px-2 py-1"
                   />
                   <button
-                    onClick={() => removeItem(it.id, it.variant as any)}
+                    onClick={() => removeItem(it.id, it.variant)}
                     className="text-red-600 hover:underline"
                   >
                     Remove

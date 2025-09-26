@@ -14,7 +14,7 @@ export async function POST() {
     const data = await res.json();
     if (!res.ok) return NextResponse.json({ error: data }, { status: res.status });
     return NextResponse.json({ token: data.token });
-  } catch (e) {
+  } catch {
     return NextResponse.json({ error: "Shiprocket auth failed" }, { status: 500 });
   }
 }
