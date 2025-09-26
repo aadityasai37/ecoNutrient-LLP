@@ -11,6 +11,11 @@ const Hero = () => {
 
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
 
   useEffect(() => {
     if (isPaused) return;
@@ -18,7 +23,7 @@ const Hero = () => {
       setCurrentTextIndex((prevIndex) =>
         prevIndex === rotatingTexts.length - 1 ? 0 : prevIndex + 1
       );
-    }, 6000); // Even slower rotation
+    }, 8000); // Slower rotation
 
     return () => clearInterval(interval);
   }, [rotatingTexts.length, isPaused]);
@@ -36,15 +41,15 @@ const Hero = () => {
       }}
       aria-label="Hero section"
     >
-      <div className="relative z-10 max-w-5xl w-full flex flex-col items-start justify-center pl-4">
-        <div className="bg-white/95 backdrop-blur-md rounded-[12px] p-4 sm:p-6 max-w-[38ch] mb-8 shadow-sm animate-fade-in-up">
-          <h1 className="font-fraunces font-bold tracking-tight text-black text-left">
+      <div className={`relative z-10 max-w-5xl w-full flex flex-col items-center justify-center transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+        <div className="bg-white/95 backdrop-blur-md rounded-[12px] p-4 sm:p-6 max-w-[38ch] mb-8 shadow-sm">
+          <h1 className="font-fraunces font-bold tracking-tight text-black text-center">
             <span className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl block whitespace-nowrap">Connecting Cultures Through</span>
             <span className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl block whitespace-nowrap">Native Indian Flavours</span>
           </h1>
         </div>
 
-        <div className="h-20 flex items-center justify-start mb-8 animate-fade-in-up">
+        <div className="h-20 flex items-center justify-center mb-8">
           <div
             className="bg-white/95 backdrop-blur-sm rounded-[10px] p-3 shadow-sm clip-path-blob"
             style={{ clipPath: "ellipse(60% 40% at 50% 50%)" }}
@@ -66,7 +71,7 @@ const Hero = () => {
             const shopSection = document.getElementById('products');
             shopSection?.scrollIntoView({ behavior: 'smooth' });
           }}
-          className="px-12 py-4 rounded-lg bg-black text-white text-xl font-bold hover:bg-gray-800 hover:scale-110 hover:shadow-2xl active:scale-95 active:shadow-lg transition-all duration-300 focus-visible:ring-2 ring-brand ring-offset-2 animate-fade-in-up"
+          className="px-12 py-4 rounded-lg bg-black text-white text-xl font-bold hover:bg-gray-800 hover:scale-110 hover:shadow-2xl active:scale-95 active:shadow-lg transition-all duration-300 focus-visible:ring-2 ring-brand ring-offset-2"
           aria-label="Shop now"
         >
           Shop Now
