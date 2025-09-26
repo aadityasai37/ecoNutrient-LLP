@@ -1,8 +1,7 @@
-import { NextRequest, NextResponse } from "next/server";
+import { NextResponse } from "next/server";
 import crypto from "node:crypto";
 
-export async function POST(req: NextRequest) {
-  const form = await req.formData();
+export async function POST() {
   const orderId = "EN-" + crypto.randomUUID().split("-")[0];
 
   // TODO: Persist order in DB and attach cart snapshot

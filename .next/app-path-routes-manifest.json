@@ -1,0 +1,21 @@
+{
+  "/_not-found/page": "/_not-found",
+  "/about/page": "/about",
+  "/api/checkout/route": "/api/checkout",
+  "/api/shiprocket/auth/route": "/api/shiprocket/auth",
+  "/api/shiprocket/create-order/route": "/api/shiprocket/create-order",
+  "/backstage/page": "/backstage",
+  "/cart/page": "/cart",
+  "/checkout/page": "/checkout",
+  "/contact/page": "/contact",
+  "/favicon.ico/route": "/favicon.ico",
+  "/legal/cancellation/page": "/legal/cancellation",
+  "/legal/privacy/page": "/legal/privacy",
+  "/legal/returns/page": "/legal/returns",
+  "/legal/shipping/page": "/legal/shipping",
+  "/legal/terms/page": "/legal/terms",
+  "/page": "/",
+  "/payment/result/page": "/payment/result",
+  "/product/[id]/page": "/product/[id]",
+  "/track/page": "/track"
+}
