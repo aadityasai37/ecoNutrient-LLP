@@ -11,7 +11,7 @@ export type CartItem = {
   qty: number;
 };
 
-type CartState = {
+export type CartState = {
   items: CartItem[];
   addItem: (item: CartItem) => void;
   removeItem: (id: string, variant: Variant) => void;
@@ -55,7 +55,7 @@ export const useCartStore = create<CartState>((set, get) => ({
       const idx = state.items.findIndex(
         (it) => it.id === item.id && it.variant === item.variant
       );
-      let items = [...state.items];
+      const items = [...state.items];
       if (idx > -1) {
         items[idx] = { ...items[idx], qty: items[idx].qty + item.qty };
       } else {

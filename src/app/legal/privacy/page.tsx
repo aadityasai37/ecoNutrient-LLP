@@ -29,7 +29,7 @@ export default function PrivacyPolicyPage() {
           <li>Your details are used solely to process and deliver your order.</li>
           <li>We share your details with our trusted shipping partner Shiprocket, strictly for the purpose of product delivery.
             <ul className="list-circle pl-6 mt-2">
-              <li>Please refer to Shiprocket's Privacy Policy for details on how they handle data.</li>
+              <li>Please refer to Shiprocket&apos;s Privacy Policy for details on how they handle data.</li>
             </ul>
           </li>
           <li>Any breach of data that occurs within the scope of the courier partner will be the sole responsibility of the courier partner.</li>

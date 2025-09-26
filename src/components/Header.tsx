@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import CartBadge from "./CartBadge";
 
 export default function Header() {
@@ -25,9 +26,11 @@ export default function Header() {
           href="/"
           className="flex items-center focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand ml-8"
         >
-          <img
+          <Image
             src="/Header_Logo_2.png"
             alt="ecoNutrient"
+            width={48}
+            height={48}
             className="h-12 w-auto"
           />
         </Link>

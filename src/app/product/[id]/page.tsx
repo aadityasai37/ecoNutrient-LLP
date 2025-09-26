@@ -11,13 +11,7 @@ const variants: { key: Variant; label: string; price: number }[] = [
   { key: "500g", label: "500 g", price: 189 },
 ];
 
-interface ProductPageProps {
-  params: {
-    id: string;
-  };
-}
-
-export default function ProductPage({ params }: ProductPageProps) {
+export default function ProductPage() {
   const addItem = useCartStore((s) => s.addItem);
   const router = useRouter();
   const [variant, setVariant] = useState<Variant>("1kg");

@@ -3,6 +3,7 @@ import { useCartStore } from "../store/cart";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 type Variant = "1kg" | "500g";
 const variants: { key: Variant; label: string; price: number }[] = [
@@ -21,9 +22,11 @@ export default function ProductCard() {
     <div className="grid md:grid-cols-2 gap-8 items-start">
       <Link href="/product/sattu" className="block">
         <div className="aspect-[4/3] bg-neutral-100 rounded-lg overflow-hidden cursor-pointer hover:shadow-lg transition-shadow duration-300">
-          <img
+          <Image
             src="/Sattu Images/Sattu 1.png"
             alt="Sattu - Premium Quality"
+            width={600}
+            height={450}
             className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
           />
         </div>
