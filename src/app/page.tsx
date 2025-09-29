@@ -106,7 +106,7 @@ export default function HomePage() {
                     <span key={i} className="text-yellow-400 text-xl">★</span>
                   ))}
                 </div>
-                <blockquote className="text-neutral-300 italic">"{testimonial.quote}"</blockquote>
+                <blockquote className="text-neutral-300 italic">{testimonial.quote}</blockquote>
               </article>
             ))}
           </div>
